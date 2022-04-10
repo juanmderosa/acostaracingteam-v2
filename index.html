@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shotcurt icon" href="assets/logo/logoacostaracingteam.png">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Acosta Racing Team - Inicio</title>
 </head>
 <body> 
@@ -43,14 +44,35 @@
         </div>
     </main>
 
-    <!--Sponsors Index -->
+    <!--Sponsors Index
     <section class="sponsors">
         <h3 class="sponsors__h3">SPONSORS</h3>
             <div class="sponsors__img">    
                 <img src="assets/logo/TonyKartlogo.png" alt="TonyKartlogo"> 
-                    <img src="assets/logo/OTKlogo.png" alt="OTKlogo">
+                <img src="assets/logo/OTKlogo.png" alt="OTKlogo">
             </div>
     </section>
+    -->
+    
+    
+
+    <!--Sponsors Bootstrap-->
+    <section class="container-fluid bg-white" style="height: 250px;">
+        <div class="row h-25 d-flex align-content-center flex-wrap">
+            <div>
+            <h3 class="sponsors__h3">SPONSORS</h3>
+            </div>
+        </div>
+        <div class="row h-75 d-flex align-content-center flex-wrap">
+            <div class="col d-flex justify-content-center">
+                <img src="assets/logo/TonyKartlogo.png" alt="TonyKartlogo"> 
+            </div>
+            <div class="col d-flex justify-content-center">
+                <img src="assets/logo/OTKlogo.png" alt="OTKlogo">
+            </div>
+        </div>
+    </section>
+
 
     <!--Video Index -->
     <section class="videoindex">
@@ -88,5 +110,6 @@
         </div>
     </footer>
 
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
