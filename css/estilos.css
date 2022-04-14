@@ -196,10 +196,9 @@ body{
 .footer__parrafos{
     grid-area: parrafo;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    flex-direction: column;
+    flex-wrap: wrap;
     color: white;
+    justify-content: center;
 }
 
 .footer__parrafos--p{
@@ -210,6 +209,8 @@ body{
 /*Main Index*/
 
 .titulo{
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 30% 70%;
@@ -254,6 +255,8 @@ body{
 }
 
 .sponsors{
+    width: 100%;
+    height: auto;
     background-color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -280,6 +283,8 @@ body{
 }
 
 .videoindex{
+    width: 100%;
+    height: auto;
     padding: 30px;
     display: flex;
     justify-content: center;
@@ -807,4 +812,127 @@ body{
     height: 40px;
     padding: 10px;
 }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+    .titulo{
+        grid-template-areas: "titulo titulo"
+                            "parrafo parrafo"
+                            "foto foto"; 
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 20% 20% 60%
+    }
+
+    .titulo__h1{
+        grid-area: titulo;
+        text-align: center;
+    }
+
+    .titulo__p{
+        grid-area: parrafo;
+        text-align: center;
+        padding: 10%;
+    }
+
+    .fotosindex{
+        grid-area: foto;
+    }
+
+    .fotosindex__img{
+        max-width: 250px;
+    }
+
+    .videoindex__vid{
+        max-width: 750px;
+        max-height: 300px;
+    }
+
+    .footer{
+        height: auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 20% 20% 25% 20% 15%;
+        grid-template-areas: "logo logo logo" 
+                                "nav nav nav " 
+                                "contact contact contact "
+                                "social social social"
+                                "parrafo parrafo parrafo";
+        background-image: linear-gradient(to right, white,grey)
+    }
+
+    .footer__logo{
+        display: flex;
+    
+    }
+
+    .footer__lists{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+        padding: 0%;
+        }
+    
+    .footer__nav{
+        text-decoration: none;
+        list-style: none;
+    
+    }
+    
+    .footer__nav--link{
+        color: black;
+        text-decoration: underline;
+        text-decoration-color: black;
+    }
+    
+    .foooter__contact{
+        grid-area: contact;
+    
+    }
+
+    .foooter__contact ul{
+        display: flex;
+    
+    }
+    
+    .footer__contactlists{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    
+    .foooter__contacticons{
+        width: 50px;   
+    
+    }
+    
+    .foooter__social{
+        grid-area: social;
+    
+    }
+    
+    .footer__socialicons{
+        max-width: 40px;
+        max-height: 40px;
+    
+        
+    }
+    
+    .footer__parrafos{
+        grid-area: parrafo;
+
+        color: white;
+    }
+    
+    .footer__parrafos--p{
+        font-size: 10px;
+        text-align: center;
+    }
 }
