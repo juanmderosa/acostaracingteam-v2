@@ -15,26 +15,52 @@
 <body>
         <!-- Header -->
 
-    <header class="header">
-        <section class="logo">
-            <a href="#">
-                <img class=header__logo src="../assets/logo/logoacostaracingteam.png" alt="Logo Acosta Racing Team"> </a>
-        </section>
-        <nav class="nav">
-            <ul class="nav__ul">
-                <li><a class="header__links" href="../index.html">Inicio</a></li>
-                <li><a class="header__links" href="#">Noticias</a></li>
-                <li><a class="header__links" href="escuderia.html">Escudería</a></li>
-                <li><a class="header__links" href="galeria.html">Galería</a></li>
-                <li><a class="header__links" href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <section class="social">
-            <img class="header__socialicons" src="../assets/icons/facebookicon.png" alt="facebookicon" > 
-            <img class="header__socialicons" src="../assets/icons/instagramicon.png" alt="instagramicon"> 
-            <img class="header__socialicons" src="../assets/icons/youtubeicon.png" alt="youtubeicon">
-        </section>
-    </header>
+        <header class="container-fluid bg-white">
+            <section class="row">
+                <div class="col-2 d-flex justify-content-center">
+                    <img src="../assets/logo/logoacostaracingteam.png" alt="">
+                </div>
+                <div class="col-8 d-flex justify-content-evenly">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                        <div class="container-fluid  d-flex">
+                            <a class="navbar-brand" href="#"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav d-flex justify-content-evenly">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/escuderia.html">Escudería</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/noticias.html">Noticias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Galería</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-2 d-flex justify-content-evenly align-items-center">
+                    <img src="../assets/icons/instagramicon.png" alt="" width="30px" height="30px">
+                    <img src="../assets/icons/facebookicon.png" alt="" width="30px" height="30px">
+                    <img src="../assets/icons/youtubeicon.png" alt="" width="30px" height="30px">
+                </div>
+            </section>
+            <section class="row">
+                <div class="col-12">
+                    <img class="img-fluid" src="../assets/img/bannerprincipal.png" alt="">
+                </div>
+            </section>
+        </header>
 
         <!-- Noticias Main  -->
 
@@ -49,7 +75,7 @@
                 <div class="card-body">
                     <h3 class="card-title text-center">TÍTULO NOTICIAS</h3>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eius quisquam, ab perspiciatis quidem laborum optio dignissimos facere velit accusantium temporibus voluptatum ratione, necessitatibus inventore culpa blanditiis suscipit soluta magnam!</p>
-                    <a href="#" class="btn btn-danger d-flex justify-content-center">Leer más</a>
+                    <a href="#" class="btn d-flex justify-content-center colobotonform">Leer más</a>
                 </div>
             </div>
             <div class="card p-4 m-2" style="width: 30rem;">
@@ -57,7 +83,7 @@
                 <div class="card-body">
                     <h3 class="card-title text-center">TÍTULO NOTICIAS</h3>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eius quisquam, ab perspiciatis quidem laborum optio dignissimos facere velit accusantium temporibus voluptatum ratione, necessitatibus inventore culpa blanditiis suscipit soluta magnam!.</p>
-                    <a href="#" class="btn btn-danger d-flex justify-content-center">Leer más</a>
+                    <a href="#" class="btn d-flex justify-content-center colobotonform">Leer más</a>
                 </div>
             </div>
             </section>
