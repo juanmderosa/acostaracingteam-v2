@@ -87,15 +87,23 @@ body {
   max-height: 40px;
 }
 
+/*Header Bootstrap*/
+.nav-link:hover{
+    font-size: 20px;
+}
+
+
+
 /*Footer*/
 .footer {
   height: 300px;
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 15% 35% 35% 15%;
   grid-template-rows: 300px 30px;
   grid-template-areas: "logo nav contact social" ". parrafo parrafo .";
   background-image: linear-gradient(to right, white, grey);
+  width: 100%;
 }
 
 .footer__logo {
@@ -172,6 +180,10 @@ body {
   padding-bottom: 20px;
 }
 
+.footer__contactlists p{
+  text-align: center;
+}
+
 .foooter__contacticons {
   size: 20px;
 }
@@ -210,7 +222,8 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 30% 70%;
   height: 750px;
-  grid-template-areas: ". titulo parrafo parrafo" "foto foto foto foto";
+  grid-template-areas: ". titulo parrafo parrafo" 
+                            "foto foto foto foto";
   padding-top: 40px;
 }
 
@@ -221,6 +234,7 @@ body {
   color: white;
   grid-area: titulo;
   line-height: initial;
+  font-weight: bold;
 }
 
 .titulo__p {
@@ -243,7 +257,7 @@ body {
   padding-bottom: 30px;
 }
 
-.fotosindex__img {
+.fotosindex__img1, .fotosindex__img2 {
   width: 450px;
 }
 
@@ -277,6 +291,11 @@ body {
   justify-content: center;
 }
 
+.videoindex__vid{
+    width: 1080px;
+    height: 640px;
+}
+
 /* Noticias */
 .titulopagina__h1 {
   display: block;
@@ -288,6 +307,7 @@ body {
   text-decoration: underline;
   padding-top: 20px;
   padding-bottom: 30px;
+  width: 100%;
 }
 
 .noticias__container {
@@ -424,6 +444,7 @@ body {
   padding-bottom: 20px;
   color: white;
   background-image: url("../assets/background/asfalt.png");
+  width: 100%;
 }
 
 .escuderiacontainer__h2 {
@@ -506,6 +527,10 @@ body {
 .galeria__video {
   grid-area: video;
   width: 720px;
+}
+
+.card{
+  width: 30rem
 }
 
 /* Contacto */
@@ -615,8 +640,8 @@ body {
 .botoncontacto {
   background-color: red;
   border-radius: 10px;
-  border: 3px solid black;
-  font-size: 25px;
+  border: 1px solid black;
+  font-size: 20px;
   font-weight: bold;
   padding: 10px;
   color: white;
@@ -647,6 +672,479 @@ body {
 }
 
 /* Media Query */
+
+@media screen and (max-width: 575px) {
+    /*Main Index*/
+.titulo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "titulo titulo" 
+                        "parrafo parrafo"; 
+    width: 100%;
+    height: max-content;
+    padding: 2%;
+    margin: auto;
+  }
+  
+  .titulo__h1 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    grid-area: titulo;
+    font-weight: bold;
+    margin-top: 0;
+    margin: auto;
+    padding-top: 0;
+  }
+  
+  .titulo__p {
+    color: white;
+    font-size: 16px;
+    grid-area: parrafo;
+    text-align: justify;
+    align-self: center;
+    padding: 2%;
+  }
+  
+  .fotosindex {
+    display: none;
+  }
+  
+  .fotosindex__img {
+    width: 200px;
+  }
+  
+.sponsors__img{
+    height: 100px;
+    width: 200px;
+}
+  .videoindex {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .videoindex__vid{
+    width: 540px;
+    height: 320px;
+}
+
+.footer {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 180px 180px 80px 40px;
+    grid-template-areas: "logo" 
+                            "nav" 
+                            "contact" 
+                            "social" 
+                            "parrafo";
+    background-image: none;
+    width: 100%;
+    height: 540px;
+  }
+  
+  .footer__logo {
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+  }
+  
+  .footer__logo img {
+    object-fit: none;
+    animation-name: logo-footer;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+  }
+  
+  .footer__lists {
+    list-style: none;
+  }
+  
+  .footer__nav {
+    list-style: none;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+  }
+
+  .footer__nav ul {
+    padding: 0;
+    margin: auto;
+    font-size: 15px;
+
+  }
+  
+  .footer__nav--link {
+    
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
+  
+  .foooter__contact {
+    grid-area: contact;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+  }
+
+
+  .foooter__contact ul{
+    padding: 2%;
+    margin: 0%;
+    
+  }
+  .footer__contactlists {
+    list-style: none;
+    font-size: 15px;
+    width: 100%;
+
+  }
+  
+  .foooter__contacticons {
+    display: none;
+  }
+  
+  .foooter__social {
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 2%;
+    
+  }
+  
+  .footer__socialicons {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  
+  .footer__parrafos {
+    grid-area: parrafo;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+    background-image: url("../assets/background/asfalt.png");
+    height: 100%;
+
+  }
+  
+  .footer__parrafos--p {
+    font-size: 9px;
+  }
+
+  .card{
+    max-width: 20rem;
+  }
+  
+
+} 
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+    .titulo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "titulo titulo" 
+                            "parrafo parrafo"; 
+        width: 100%;
+        height: max-content;
+        padding: 2%;
+        margin: auto;
+      }
+      
+      .titulo__h1 {
+        font-size: 40px;
+        text-align: center;
+        color: white;
+        grid-area: titulo;
+        font-weight: bold;
+        margin-top: 0;
+        margin: auto;
+        padding-top: 0;
+      }
+      
+      .titulo__p {
+        color: white;
+        font-size: 16px;
+        grid-area: parrafo;
+        text-align: justify;
+        align-self: center;
+        padding: 2%;
+      }
+      
+      .fotosindex {
+        display: none;
+      }
+      
+      .fotosindex__img {
+        width: 200px;
+      }
+      
+    .sponsors__img{
+        height: 100px;
+        width: 200px;
+    }
+      .videoindex {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+      }
+    
+      .videoindex__vid{
+        width: 540px;
+        height: 320px;
+    }
+    
+    .footer {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 180px 180px 80px 40px;
+        grid-template-areas: "logo" 
+                                "nav" 
+                                "contact" 
+                                "social" 
+                                "parrafo";
+        background-image: none;
+        width: 100%;
+        height: 540px;
+      }
+      
+      .footer__logo {
+        grid-area: logo;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+      }
+      
+      .footer__logo img {
+        object-fit: none;
+        animation-name: logo-footer;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-duration: 5s;
+      }
+      
+      .footer__lists {
+        list-style: none;
+      }
+      
+      .footer__nav {
+        list-style: none;
+        grid-area: nav;
+        display: flex;
+        justify-content: space-evenly;
+        width: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    
+      }
+    
+      .footer__nav ul {
+        padding: 0;
+        margin: auto;
+        font-size: 15px;
+    
+      }
+      
+      .footer__nav--link {
+        
+        color: black;
+        text-decoration: underline;
+        text-decoration-color: black;
+      }
+      
+      .foooter__contact {
+        grid-area: contact;
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+        margin: 0%;
+      }
+    
+    
+      .foooter__contact ul{
+        padding: 2%;
+        margin: 0%;
+      }
+      .footer__contactlists {
+        list-style: none;
+        font-size: 15px;
+      }
+      
+      .foooter__contacticons {
+        display: none;
+      }
+      
+      .foooter__social {
+        grid-area: social;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-evenly;
+        padding: 2%;
+        
+      }
+      
+      .footer__socialicons {
+        max-width: 40px;
+        max-height: 40px;
+      }
+      
+      .footer__parrafos {
+        grid-area: parrafo;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        color: white;
+        background-image: url("../assets/background/asfalt.png");
+        height: 100%;
+    
+      }
+      
+      .footer__parrafos--p {
+        font-size: 9px;
+      }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .footer {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 180px 180px 80px 40px;
+    grid-template-areas: "logo" 
+                            "nav" 
+                            "contact" 
+                            "social" 
+                            "parrafo";
+    background-image: none;
+    width: 100%;
+    height: 540px;
+  }
+  
+  .footer__logo {
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+  }
+  
+  .footer__logo img {
+    object-fit: none;
+    animation-name: logo-footer;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+  }
+  
+  .footer__lists {
+    list-style: none;
+  }
+  
+  .footer__nav {
+    list-style: none;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+  }
+
+  .footer__nav ul {
+    padding: 0;
+    margin: auto;
+    font-size: 15px;
+
+  }
+  
+  .footer__nav--link {
+    
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
+  
+  .foooter__contact {
+    grid-area: contact;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+  }
+
+
+  .foooter__contact ul{
+    padding: 2%;
+    margin: 0%;
+  }
+  .footer__contactlists {
+    list-style: none;
+    font-size: 15px;
+  }
+  
+  .foooter__contacticons {
+    display: none;
+  }
+  
+  .foooter__social {
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 2%;
+    
+  }
+  
+  .footer__socialicons {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  
+  .footer__parrafos {
+    grid-area: parrafo;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+    background-image: url("../assets/background/asfalt.png");
+    height: 100%;
+
+  }
+
+}
+
+/*
 @media screen and (min-width: 768px) and (max-width: 904px) {
   .logo {
     grid-column: 1/3;
@@ -756,5 +1254,6 @@ body {
     padding: 10px;
   }
 }
+*/
 
-/*# sourceMappingURL=estilos.css.map */
+
