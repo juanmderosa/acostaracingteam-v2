@@ -12,8 +12,6 @@ body{
         
 }
 
-/*header*/
-
 .header{
     background-image: url('../assets/img/bannerprincipal.png');
     background-position:bottom;
@@ -27,8 +25,8 @@ body{
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas: "logo nav nav social";
-
 }
+
 
 .logo{
     grid-area: logo;
@@ -47,28 +45,23 @@ body{
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
-    }
-
 .nav__ul{
     display: flex;
     list-style: none;
     width: 100%;
     justify-content: space-around;
-}
-
 .header__links{
     text-decoration: underline;
     color: black;
     font-weight: 500;
     transition: color 10ms;
-}
+        &:hover{
+            color: red;
+            font-weight: bold;}
 
-.header__links:hover{
-    color: red;
-    font-weight: bold;
-}
-
-
+			}
+		}
+	}
 
 .social{
     grid-area: social;
@@ -78,17 +71,15 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
-}
-
 .header__socialicons{
     max-width: 30px;
     max-height: 30px;
     transition: max-widht, max-height 1s;
+        &:hover{
+            max-width: 40px;
+            max-height: 40px;
+        }
     }
-
-.header__socialicons:hover{
-    max-width: 40px;
-    max-height: 40px;
 }
 
 /*Footer*/
@@ -111,24 +102,24 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
+    img{
+        object-fit: none;
+        animation-name: logo-footer;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-duration: 5s;
+        @keyframes logo-footer {
+            0%{ transform: rotateX(0deg);}
+            25%{ transform: rotateX(45deg)}
+            50%{ transform: rotateX(90deg);}
+            75%{ transform: rotateX(180deg)}
+            100%{ transform: rotateX(360deg);}
+        }
+    }
 
 }
 
-.footer__logo img{
-    object-fit: none;
-    animation-name: logo-footer;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-duration: 5s;
-}
 
-@keyframes logo-footer {
-    0%{ transform: rotateX(0deg);}
-    25%{ transform: rotateX(45deg)}
-    50%{ transform: rotateX(90deg);}
-    75%{ transform: rotateX(180deg)}
-    100%{ transform: rotateX(360deg);}
-}
 
 .footer__lists{
     list-style: none;
@@ -144,12 +135,11 @@ body{
     align-content: center;
     justify-content: center;
     width: 100%;
-}
-
-.footer__nav--link{
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: black;
+    .footer__nav--link{
+        color: black;
+        text-decoration: underline;
+        text-decoration-color: black;
+    }
 }
 
 .foooter__contact{
@@ -159,21 +149,18 @@ body{
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-}
-
-.footer__contactlists{
-    list-style: none;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: flex-end;
-    padding-bottom: 20px;
-}
-
-
-.foooter__contacticons{
-    size: 20px;    
-
+    .footer__contactlists{
+        list-style: none;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-end;
+        padding-bottom: 20px;
+        .foooter__contacticons{
+            size: 20px;    
+        
+        }
+    }
 }
 
 .foooter__social{
@@ -183,13 +170,10 @@ body{
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
-}
-
-.footer__socialicons{
-    max-width: 40px;
-    max-height: 40px;
-
-    
+    .footer__socialicons{
+        max-width: 40px;
+        max-height: 40px;            
+    }
 }
 
 .footer__parrafos{
@@ -199,11 +183,10 @@ body{
     justify-content: space-evenly;
     flex-direction: column;
     color: white;
-}
-
-.footer__parrafos--p{
-    font-size: 10px;
-    text-align: center;
+    .footer__parrafos--p{
+        font-size: 10px;
+        text-align: center;
+    }
 }
 
 /*Main Index*/
@@ -216,41 +199,36 @@ body{
     grid-template-areas: ". titulo parrafo parrafo"
     "foto foto foto foto";
     padding-top: 40px;
-}
-
-.titulo__h1{
-    font-size: 50px;
-    font-weight: bold;
-    align-self: center;
-    text-align: left;
-    color: white;
-    grid-area: titulo;
-    line-height: initial;
-}
-
-.titulo__p{
-    color: white;
-    font-size: 18px;
-    grid-area: parrafo;
-    text-align: justify;
-    align-self: center;
-    padding-right: 100px;
-}
-
-.fotosindex{
-    grid-area: foto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.fotosindex__img{
-    width: 450px;
-}
+    h1{
+        font-size: 50px;
+        font-weight: bold;
+        align-self: center;
+        text-align: left;
+        color: white;
+        grid-area: titulo;
+        line-height: initial;}
+        p{
+            color: white;
+            font-size: 18px;
+            grid-area: parrafo;
+            text-align: justify;
+            align-self: center;
+            padding-right: 100px;
+        }
+        .fotosindex{
+            grid-area: foto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-around;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            .fotosindex__img{
+                width: 450px;
+            }
+        }
+    }
 
 .sponsors{
     background-color: white;
@@ -259,6 +237,7 @@ body{
     grid-template-rows: 100px 200px;
     grid-template-areas: ". titulo ."
                         "sponsor sponsor sponsor";
+                        
 }
 
 .sponsors__h3{

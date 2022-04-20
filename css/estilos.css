@@ -9,7 +9,6 @@ body {
   background-position: center;
   line-height: 2; }
 
-/*header*/
 .header {
   background-image: url("../assets/img/bannerprincipal.png");
   background-position: bottom;
@@ -22,8 +21,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "logo nav nav social";
-  align-content: space-between; }
+  grid-template-areas: "logo nav nav social"; }
 
 .logo {
   grid-area: logo;
@@ -41,22 +39,19 @@ body {
   flex-direction: row;
   width: 100%;
   justify-content: space-evenly; }
-
-.nav__ul {
-  display: flex;
-  list-style: none;
-  width: 100%;
-  justify-content: space-around; }
-
-.header__links {
-  text-decoration: underline;
-  color: black;
-  font-weight: 500;
-  transition: color 10ms; }
-
-.header__links:hover {
-  color: red;
-  font-weight: bold; }
+  .nav .nav__ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-around; }
+    .nav .nav__ul .header__links {
+      text-decoration: underline;
+      color: black;
+      font-weight: 500;
+      transition: color 10ms; }
+      .nav .nav__ul .header__links:hover {
+        color: red;
+        font-weight: bold; }
 
 .social {
   grid-area: social;
@@ -66,15 +61,13 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center; }
-
-.header__socialicons {
-  max-width: 30px;
-  max-height: 30px;
-  transition: max-widht, max-height 1s; }
-
-.header__socialicons:hover {
-  max-width: 40px;
-  max-height: 40px; }
+  .social .header__socialicons {
+    max-width: 30px;
+    max-height: 30px;
+    transition: max-widht, max-height 1s; }
+    .social .header__socialicons:hover {
+      max-width: 40px;
+      max-height: 40px; }
 
 /*Footer*/
 .footer {
@@ -83,8 +76,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 300px 30px;
-  grid-template-areas: "logo nav contact social"
- ". parrafo parrafo .";
+  grid-template-areas: "logo nav contact social" ". parrafo parrafo .";
   background-image: linear-gradient(to right, white, grey); }
 
 .footer__logo {
@@ -94,13 +86,12 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center; }
-
-.footer__logo img {
-  object-fit: none;
-  animation-name: logo-footer;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 5s; }
+  .footer__logo img {
+    object-fit: none;
+    animation-name: logo-footer;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s; }
 
 @keyframes logo-footer {
   0% {
@@ -127,11 +118,10 @@ body {
   align-content: center;
   justify-content: center;
   width: 100%; }
-
-.footer__nav--link {
-  color: black;
-  text-decoration: underline;
-  text-decoration-color: black; }
+  .footer__nav .footer__nav--link {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black; }
 
 .foooter__contact {
   grid-area: contact;
@@ -140,17 +130,15 @@ body {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center; }
-
-.footer__contactlists {
-  list-style: none;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: flex-end;
-  padding-bottom: 20px; }
-
-.foooter__contacticons {
-  size: 20px; }
+  .foooter__contact .footer__contactlists {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 20px; }
+    .foooter__contact .footer__contactlists .foooter__contacticons {
+      size: 20px; }
 
 .foooter__social {
   grid-area: social;
@@ -159,10 +147,9 @@ body {
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-evenly; }
-
-.footer__socialicons {
-  max-width: 40px;
-  max-height: 40px; }
+  .foooter__social .footer__socialicons {
+    max-width: 40px;
+    max-height: 40px; }
 
 .footer__parrafos {
   grid-area: parrafo;
@@ -171,10 +158,9 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   color: white; }
-
-.footer__parrafos--p {
-  font-size: 10px;
-  text-align: center; }
+  .footer__parrafos .footer__parrafos--p {
+    font-size: 10px;
+    text-align: center; }
 
 /*Main Index*/
 .titulo {
@@ -182,47 +168,41 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 30% 70%;
   height: 750px;
-  grid-template-areas: ". titulo parrafo parrafo"
- "foto foto foto foto";
+  grid-template-areas: ". titulo parrafo parrafo" "foto foto foto foto";
   padding-top: 40px; }
-
-.titulo__h1 {
-  font-size: 50px;
-  font-weight: bold;
-  align-self: center;
-  text-align: left;
-  color: white;
-  grid-area: titulo;
-  line-height: initial; }
-
-.titulo__p {
-  color: white;
-  font-size: 18px;
-  grid-area: parrafo;
-  text-align: justify;
-  align-self: center;
-  padding-right: 100px; }
-
-.fotosindex {
-  grid-area: foto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-around;
-  padding-top: 30px;
-  padding-bottom: 30px; }
-
-.fotosindex__img {
-  width: 450px; }
+  .titulo h1 {
+    font-size: 50px;
+    font-weight: bold;
+    align-self: center;
+    text-align: left;
+    color: white;
+    grid-area: titulo;
+    line-height: initial; }
+  .titulo p {
+    color: white;
+    font-size: 18px;
+    grid-area: parrafo;
+    text-align: justify;
+    align-self: center;
+    padding-right: 100px; }
+  .titulo .fotosindex {
+    grid-area: foto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .titulo .fotosindex .fotosindex__img {
+      width: 450px; }
 
 .sponsors {
   background-color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 200px;
-  grid-template-areas: ". titulo ."
- "sponsor sponsor sponsor"; }
+  grid-template-areas: ". titulo ." "sponsor sponsor sponsor"; }
 
 .sponsors__h3 {
   grid-area: titulo;
@@ -260,8 +240,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 15% 85%;
-  grid-template-areas: "titulo titulo"
- "articulos articulos";
+  grid-template-areas: "titulo titulo" "articulos articulos";
   margin-right: 5%;
   margin-left: 5%; }
 
@@ -316,10 +295,7 @@ body {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "titulo titulo titulo titulo"
- "historia historia filosofia filosofia"
- "titulos titulos titulos titulos"
- "foto foto foto foto";
+  grid-template-areas: "titulo titulo titulo titulo" "historia historia filosofia filosofia" "titulos titulos titulos titulos" "foto foto foto foto";
   cursor: default; }
 
 .escuderiacontainer__titulos {
@@ -393,10 +369,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "foto1 foto2"
- "foto3 foto4"
- "foto5 foto6"
- "video video";
+  grid-template-areas: "foto1 foto2" "foto3 foto4" "foto5 foto6" "video video";
   justify-items: center;
   padding: 20px;
   margin-left: 5%;
@@ -452,9 +425,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row: auto auto auto;
-  grid-template-areas: "titulo titulo"
- "form form"
- "redes datos";
+  grid-template-areas: "titulo titulo" "form form" "redes datos";
   column-gap: 30px;
   margin: 30px; }
 
@@ -578,9 +549,7 @@ body {
     grid-column: 3/5;
     grid-row: 1/2; }
   .titulo {
-    grid-template-areas: "titulo titulo titulo"
- "parrafo parrafo parrafo"
- "foto foto foto";
+    grid-template-areas: "titulo titulo titulo" "parrafo parrafo parrafo" "foto foto foto";
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 20% 20% 60%; }
   .titulo__h1 {
@@ -598,11 +567,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "titulo titulo titulo "
- "historia historia historia"
- "filosofia filosofia filosofia"
- "titulos titulos titulos"
- "foto foto foto "; }
+    grid-template-areas: "titulo titulo titulo " "historia historia historia" "filosofia filosofia filosofia" "titulos titulos titulos" "foto foto foto "; }
   .escuderiacontainer__titulos {
     grid-area: titulos;
     background-color: white;
@@ -626,21 +591,13 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: "foto1" 
- "foto2"
- "foto3" 
- "foto4"
- "foto5"
- "foto6"; }
+    grid-template-areas: "foto1"  "foto2" "foto3"  "foto4" "foto5" "foto6"; }
   .form {
     color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row: auto auto auto auto;
-    grid-template-areas: "titulo titulo"
- "form form"
- "redes redes"
- "datos datos"; }
+    grid-template-areas: "titulo titulo" "form form" "redes redes" "datos datos"; }
   .nuestrasRedes {
     margin-left: 0%;
     margin-bottom: 2%;
