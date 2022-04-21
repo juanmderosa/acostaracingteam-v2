@@ -171,11 +171,10 @@ body {
   grid-template-areas: ". titulo parrafo parrafo" "foto foto foto foto";
   padding-top: 40px; }
   .titulo h1 {
-    font-size: 50px;
-    font-weight: bold;
+    font: bold 50px "Montserrat";
+    color: white;
     align-self: center;
     text-align: left;
-    color: white;
     grid-area: titulo;
     line-height: initial; }
   .titulo p {
@@ -227,11 +226,10 @@ body {
 /* Noticias */
 .titulopagina__h1 {
   display: block;
-  font-weight: bold;
-  font-size: 40px;
+  font: bold 50px "Montserrat";
+  color: white;
   text-align: center;
   line-height: 1.5;
-  color: white;
   text-decoration: underline;
   padding-top: 20px;
   padding-bottom: 30px; }
@@ -341,15 +339,14 @@ body {
   width: 100%; }
 
 .titulopagina__h1--escuderia {
+  font: bold 50px "Montserrat";
+  color: white;
   grid-area: titulo;
-  font-weight: bold;
-  font-size: 40px;
   text-align: center;
   line-height: 1.5;
   text-decoration: underline;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: white;
   background-image: url("../assets/background/asfalt.png"); }
 
 .escuderiacontainer__h2 {
@@ -431,10 +428,11 @@ body {
 
 .form h1 {
   text-align: center;
-  padding-top: 15px;
   padding: 15px;
+  grid-area: titulo;
+  font: bold 50px "Montserrat";
   color: white;
-  grid-area: titulo; }
+  text-decoration: underline; }
 
 .formulario {
   grid-area: form;

@@ -1,86 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-}
+@import "normalize";
+@import "body";
+@import "header";
 
-body{
-        background-image: url('../assets/background/asfalt.png');
-        background-position: center;
-        line-height: 2;
-        
-}
-
-.header{
-    background-image: url('../assets/img/bannerprincipal.png');
-    background-position:bottom;
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-color: white;
-    max-height: 450px;
-    margin: auto;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: "logo nav nav social";
-}
-
-
-.logo{
-    grid-area: logo;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-}
-
-.nav{
-    grid-area: nav;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-.nav__ul{
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: space-around;
-.header__links{
-    text-decoration: underline;
-    color: black;
-    font-weight: 500;
-    transition: color 10ms;
-        &:hover{
-            color: red;
-            font-weight: bold;}
-
-			}
-		}
-	}
-
-.social{
-    grid-area: social;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;
-.header__socialicons{
-    max-width: 30px;
-    max-height: 30px;
-    transition: max-widht, max-height 1s;
-        &:hover{
-            max-width: 40px;
-            max-height: 40px;
-        }
-    }
-}
+//Variables
+$h1-titulos: bold 50px 'Montserrat';
+$h1-color: white;
+ 
 
 /*Footer*/
 
@@ -200,11 +125,10 @@ body{
     "foto foto foto foto";
     padding-top: 40px;
     h1{
-        font-size: 50px;
-        font-weight: bold;
+        font: $h1-titulos;
+        color: $h1-color;
         align-self: center;
         text-align: left;
-        color: white;
         grid-area: titulo;
         line-height: initial;}
         p{
@@ -229,6 +153,7 @@ body{
             }
         }
     }
+
 
 .sponsors{
     background-color: white;
@@ -268,11 +193,10 @@ body{
 
 .titulopagina__h1{
     display: block;
-    font-weight: bold;
-    font-size: 40px;
+    font: $h1-titulos;
+    color: $h1-color;
     text-align: center;
     line-height: 1.5;
-    color: white;
     text-decoration: underline;
     padding-top: 20px;
     padding-bottom: 30px;
@@ -415,15 +339,14 @@ body{
 }
 
 .titulopagina__h1--escuderia{
+    font: $h1-titulos;
+    color: $h1-color;
     grid-area: titulo;
-    font-weight: bold;
-    font-size: 40px;
     text-align: center;
     line-height: 1.5;
     text-decoration: underline;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: white;
     background-image: url('../assets/background/asfalt.png');
     }
 
@@ -530,10 +453,11 @@ body{
 
 .form h1{
     text-align: center;
-    padding-top: 15px;
     padding: 15px;
-    color: white;
     grid-area: titulo;
+    font: $h1-titulos;
+    color: $h1-color;
+    text-decoration: underline;
 }
 
 .formulario{
