@@ -1,3 +1,15 @@
+//Maps
+$paleta-colores: (
+    negro: #0000 ,
+    rojo: #dc1d25 ,
+    verde:  #07a44f ,
+    verdeoscuro: #24593a ,
+    grisclaro: #eff1ef ,
+    grismedio: #aeabab ,
+    grisoscuro: #827e79 ,
+    blanco: #fff,
+);
+
 .header{
     background-image: url('../assets/img/bannerprincipal.png');
     background-position:bottom;
@@ -42,7 +54,7 @@
     font-weight: 500;
     transition: color 10ms;
         &:hover{
-            color: red;
+            color: map-get($map: $paleta-colores, $key: rojo);
             font-weight: bold;}
 
 			}

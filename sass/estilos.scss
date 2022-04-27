@@ -5,13 +5,24 @@
 //Variables
 $h1-titulos: bold 50px 'Montserrat';
 $h1-color: white;
- 
+
+//Maps
+$paleta-colores: (
+    negro: #0000 ,
+    rojo: #dc1d25 ,
+    verde:  #07a44f ,
+    verdeoscuro: #24593a ,
+    grisclaro: #eff1ef ,
+    grismedio: #aeabab ,
+    grisoscuro: #827e79 ,
+    blanco: #fff,
+);
+
 
 /*Footer*/
 
 .footer{
     height: 300px;
-    background-color: white;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: 300px 30px;
@@ -43,9 +54,6 @@ $h1-color: white;
     }
 
 }
-
-
-
 .footer__lists{
     list-style: none;
     }
@@ -83,7 +91,6 @@ $h1-color: white;
         padding-bottom: 20px;
         .foooter__contacticons{
             size: 20px;    
-        
         }
     }
 }
@@ -156,7 +163,7 @@ $h1-color: white;
 
 
 .sponsors{
-    background-color: white;
+    background-color: map-get($map: $paleta-colores, $key: blanco);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px 200px;
@@ -167,7 +174,7 @@ $h1-color: white;
 
 .sponsors__h3{
     grid-area: titulo;
-    color: black;
+    color: map-get($map: $paleta-colores, $key: negro);
     text-align: center;
     align-self: center;
     text-decoration: underline;
@@ -191,17 +198,6 @@ $h1-color: white;
 
 /* Noticias */
 
-.titulopagina__h1{
-    display: block;
-    font: $h1-titulos;
-    color: $h1-color;
-    text-align: center;
-    line-height: 1.5;
-    text-decoration: underline;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    }
-
 .noticias__container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -213,50 +209,53 @@ $h1-color: white;
 }
 
 .titulopagina__noticias{
-    grid-area: titulo;
-    }
+    grid-area: titulo;}
 
-.noticias__article{
-    padding-left: 2%;
-    padding-right: 2%;
-}
+.titulopagina__h1{
+        display: block;
+        font: $h1-titulos;
+        color: $h1-color;
+        text-align: center;
+        line-height: 1.5;
+        text-decoration: underline;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        
+    }
 
 .articlecontainer{
     grid-area: articulos;
     display: flex;
+
+    .noticias__article{
+        padding-left: 2%;
+        padding-right: 2%;
+
+        .noticias__titulos{
+            padding-bottom: 5px;
+            color: black;
+            text-decoration: underline;
+            background-color: white;
+            text-align: center;}
+        
+        .noticias__bajada{
+            color: black;
+            background-color: white;
+            text-align: center;
+            width: 100%;
+            padding-bottom: 15px;}
+        .noticias__p{
+            color: black;
+            background-color: white;
+            text-align: justify;
+            width: 100%;
+            padding: 10px;}
+        .noticias__img{
+            background-color: white;
+            width: 100%;}
+            
+    }
 }
-
-
-.noticias__titulos{
-    padding-bottom: 5px;
-    color: black;
-    text-decoration: underline;
-    background-color: white;
-    text-align: center;
-}
-
-.noticias__bajada{
-    color: black;
-    background-color: white;
-    text-align: center;
-    width: 100%;
-    padding-bottom: 15px;
-}
-
-.noticias__p{
-    color: black;
-    background-color: white;
-    text-align: justify;
-    width: 100%;
-    padding: 10px;
-    
-}
-
-.noticias__img{
-    background-color: white;
-    width: 100%;
-}
-
 .separador{
     height: 80px;
 }
@@ -280,76 +279,19 @@ $h1-color: white;
                             "titulos titulos titulos titulos"
                             "foto foto foto foto";
     cursor: default;
-}
-
-.escuderiacontainer__titulos{
-    grid-area: titulos;
-    background-color: white;
-    margin: 30px;
-    padding: 30px;
-    align-self: center;
-    transition: background-image 2s;
-
-}
-
-.escuderiacontainer__titulos:hover{
-    background-image: linear-gradient(white, grey);
-    transform: translatey(-15px);
-}
-
-
-.escuderiacontainer__filosofia{
-    grid-area: filosofia;
-    background-color: white;
-    margin: 30px;
-    padding: 30px;
-    transition: background-image 2s;
-}
-
-.escuderiacontainer__filosofia:hover{
-    background-image: linear-gradient(white, grey);
-    transform: translate(-15px);
+    .titulopagina__h1--escuderia{
+        font: $h1-titulos;
+        color: $h1-color;
+        grid-area: titulo;
+        text-align: center;
+        line-height: 1.5;
+        text-decoration: underline;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-image: url('../assets/background/asfalt.png');
+        }
     
 }
-
-
-.escuderiacontainer__historia{
-    grid-area: historia;
-    background-color: white;
-    margin: 30px;
-    padding: 30px;
-    transition: background-image 2s;
-}
-
-.escuderiacontainer__historia:hover{
-    background-image: linear-gradient(white, grey);
-    transform: translate(15px);
-    
-}
-
-
-.escuderia__imgcontainer{
-    grid-area: foto;
-    margin: 30px;
-}
-
-.escuderia__img{
-    object-fit: cover;
-    width: 100%;
-}
-
-.titulopagina__h1--escuderia{
-    font: $h1-titulos;
-    color: $h1-color;
-    grid-area: titulo;
-    text-align: center;
-    line-height: 1.5;
-    text-decoration: underline;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-image: url('../assets/background/asfalt.png');
-    }
-
 .escuderiacontainer__h2{
     text-align: center;
     padding-bottom: 20px;
@@ -363,10 +305,55 @@ $h1-color: white;
 .escuderiacontainer__li{
     text-align: center;
     list-style: none;
-    
+}
+
+@mixin escuderia {    background-color: white;
+    margin: 30px;
+    padding: 30px;
+    transition: background-image 2s;
+}
+
+.escuderiacontainer__historia{
+    @include escuderia();
+    grid-area: historia;
+    &:hover{
+        background-image: linear-gradient(white, grey);
+        transform: translate(15px);}
+}
+
+.escuderiacontainer__titulos{
+    @include escuderia();
+    grid-area: titulos;
+    align-self: center;
+    &:hover{
+        background-image: linear-gradient(white, grey);
+        transform: translatey(-15px);
+    }
+}
+
+.escuderiacontainer__filosofia{
+    @include escuderia();
+    grid-area: filosofia;
+    &:hover{
+        background-image: linear-gradient(white, grey);
+        transform: translate(15px);}
+}
+
+.escuderia__imgcontainer{
+    grid-area: foto;
+    margin: 30px;
+}
+
+.escuderia__img{
+    object-fit: cover;
+    width: 100%;
 }
 
 /* Galeria */
+
+.titulopagina__h1--galeria{
+    @extend .titulopagina__h1;
+}
 
 .galeriacontainer{
     display: grid;
@@ -546,7 +533,7 @@ $h1-color: white;
 }
 
 .botoncontacto{
-    background-color: red;
+    background-color: map-get($map: $paleta-colores, $key: rojo);
     border-radius: 10px;
     border: 3px solid black;
     font-size: 25px;

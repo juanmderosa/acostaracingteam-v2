@@ -9,6 +9,9 @@ body {
   background-position: center;
   line-height: 2; }
 
+img {
+  max-width: 100%; }
+
 .header {
   background-image: url("../assets/img/bannerprincipal.png");
   background-position: bottom;
@@ -50,7 +53,7 @@ body {
       font-weight: 500;
       transition: color 10ms; }
       .nav .nav__ul .header__links:hover {
-        color: red;
+        color: #dc1d25;
         font-weight: bold; }
 
 .social {
@@ -72,7 +75,6 @@ body {
 /*Footer*/
 .footer {
   height: 300px;
-  background-color: white;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 300px 30px;
@@ -197,7 +199,7 @@ body {
       width: 450px; }
 
 .sponsors {
-  background-color: white;
+  background-color: #fff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 200px;
@@ -205,7 +207,7 @@ body {
 
 .sponsors__h3 {
   grid-area: titulo;
-  color: black;
+  color: #0000;
   text-align: center;
   align-self: center;
   text-decoration: underline;
@@ -224,16 +226,6 @@ body {
   justify-content: center; }
 
 /* Noticias */
-.titulopagina__h1 {
-  display: block;
-  font: bold 50px "Montserrat";
-  color: white;
-  text-align: center;
-  line-height: 1.5;
-  text-decoration: underline;
-  padding-top: 20px;
-  padding-bottom: 30px; }
-
 .noticias__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -245,38 +237,43 @@ body {
 .titulopagina__noticias {
   grid-area: titulo; }
 
-.noticias__article {
-  padding-left: 2%;
-  padding-right: 2%; }
+.titulopagina__h1, .titulopagina__h1--galeria {
+  display: block;
+  font: bold 50px "Montserrat";
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  text-decoration: underline;
+  padding-top: 20px;
+  padding-bottom: 30px; }
 
 .articlecontainer {
   grid-area: articulos;
   display: flex; }
-
-.noticias__titulos {
-  padding-bottom: 5px;
-  color: black;
-  text-decoration: underline;
-  background-color: white;
-  text-align: center; }
-
-.noticias__bajada {
-  color: black;
-  background-color: white;
-  text-align: center;
-  width: 100%;
-  padding-bottom: 15px; }
-
-.noticias__p {
-  color: black;
-  background-color: white;
-  text-align: justify;
-  width: 100%;
-  padding: 10px; }
-
-.noticias__img {
-  background-color: white;
-  width: 100%; }
+  .articlecontainer .noticias__article {
+    padding-left: 2%;
+    padding-right: 2%; }
+    .articlecontainer .noticias__article .noticias__titulos {
+      padding-bottom: 5px;
+      color: black;
+      text-decoration: underline;
+      background-color: white;
+      text-align: center; }
+    .articlecontainer .noticias__article .noticias__bajada {
+      color: black;
+      background-color: white;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 15px; }
+    .articlecontainer .noticias__article .noticias__p {
+      color: black;
+      background-color: white;
+      text-align: justify;
+      width: 100%;
+      padding: 10px; }
+    .articlecontainer .noticias__article .noticias__img {
+      background-color: white;
+      width: 100%; }
 
 .separador {
   height: 80px; }
@@ -295,59 +292,16 @@ body {
   grid-template-rows: auto auto auto auto;
   grid-template-areas: "titulo titulo titulo titulo" "historia historia filosofia filosofia" "titulos titulos titulos titulos" "foto foto foto foto";
   cursor: default; }
-
-.escuderiacontainer__titulos {
-  grid-area: titulos;
-  background-color: white;
-  margin: 30px;
-  padding: 30px;
-  align-self: center;
-  transition: background-image 2s; }
-
-.escuderiacontainer__titulos:hover {
-  background-image: linear-gradient(white, grey);
-  transform: translatey(-15px); }
-
-.escuderiacontainer__filosofia {
-  grid-area: filosofia;
-  background-color: white;
-  margin: 30px;
-  padding: 30px;
-  transition: background-image 2s; }
-
-.escuderiacontainer__filosofia:hover {
-  background-image: linear-gradient(white, grey);
-  transform: translate(-15px); }
-
-.escuderiacontainer__historia {
-  grid-area: historia;
-  background-color: white;
-  margin: 30px;
-  padding: 30px;
-  transition: background-image 2s; }
-
-.escuderiacontainer__historia:hover {
-  background-image: linear-gradient(white, grey);
-  transform: translate(15px); }
-
-.escuderia__imgcontainer {
-  grid-area: foto;
-  margin: 30px; }
-
-.escuderia__img {
-  object-fit: cover;
-  width: 100%; }
-
-.titulopagina__h1--escuderia {
-  font: bold 50px "Montserrat";
-  color: white;
-  grid-area: titulo;
-  text-align: center;
-  line-height: 1.5;
-  text-decoration: underline;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-image: url("../assets/background/asfalt.png"); }
+  .escuderiacontainer .titulopagina__h1--escuderia {
+    font: bold 50px "Montserrat";
+    color: white;
+    grid-area: titulo;
+    text-align: center;
+    line-height: 1.5;
+    text-decoration: underline;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url("../assets/background/asfalt.png"); }
 
 .escuderiacontainer__h2 {
   text-align: center;
@@ -360,6 +314,45 @@ body {
 .escuderiacontainer__li {
   text-align: center;
   list-style: none; }
+
+.escuderiacontainer__historia {
+  background-color: white;
+  margin: 30px;
+  padding: 30px;
+  transition: background-image 2s;
+  grid-area: historia; }
+  .escuderiacontainer__historia:hover {
+    background-image: linear-gradient(white, grey);
+    transform: translate(15px); }
+
+.escuderiacontainer__titulos {
+  background-color: white;
+  margin: 30px;
+  padding: 30px;
+  transition: background-image 2s;
+  grid-area: titulos;
+  align-self: center; }
+  .escuderiacontainer__titulos:hover {
+    background-image: linear-gradient(white, grey);
+    transform: translatey(-15px); }
+
+.escuderiacontainer__filosofia {
+  background-color: white;
+  margin: 30px;
+  padding: 30px;
+  transition: background-image 2s;
+  grid-area: filosofia; }
+  .escuderiacontainer__filosofia:hover {
+    background-image: linear-gradient(white, grey);
+    transform: translate(15px); }
+
+.escuderia__imgcontainer {
+  grid-area: foto;
+  margin: 30px; }
+
+.escuderia__img {
+  object-fit: cover;
+  width: 100%; }
 
 /* Galeria */
 .galeriacontainer {
@@ -506,7 +499,7 @@ body {
   list-style: none; }
 
 .botoncontacto {
-  background-color: red;
+  background-color: #dc1d25;
   border-radius: 10px;
   border: 3px solid black;
   font-size: 25px;
