@@ -66,28 +66,25 @@ $h1-titulosquery: bold 30px 'Montserrat';
     grid-template-areas: ". titulo ."
                         "sponsor sponsor sponsor";
     width: 100%;
-}
-
-.sponsors__h2{
-    grid-area: titulo;
-    color: map-get($map: $paleta-colores, $key: rojo );
-    text-align: center;
-    align-self: center;
-    text-decoration: underline;
-    font-size: 30px;
-    font-weight: bold;
-    text-shadow: 1px -2px 2px map-get($map: $paleta-colores, $key: grisoscuro );;
-} 
-
-.sponsors__imgcontainer{
-    grid-area: sponsor;
-    display: flex;
-    justify-content: space-around;
-    align-self: center;
-}
-
-.sponsors__img{
-    min-width: 75px;
+    .sponsors__h2{
+        grid-area: titulo;
+        color: map-get($map: $paleta-colores, $key: rojo );
+        text-align: center;
+        align-self: center;
+        text-decoration: underline;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 1px -2px 2px map-get($map: $paleta-colores, $key: grisoscuro );;
+    } 
+    .sponsors__imgcontainer{
+        grid-area: sponsor;
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+    }
+    .sponsors__img{
+        min-width: 75px;
+    }    
 }
 
 .videoindex{

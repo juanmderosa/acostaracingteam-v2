@@ -221,244 +221,244 @@ $h1-titulosquery: bold 30px 'Montserrat';
         max-width: 50px;
         max-height: 50px;}
 
-        .footer {
-            background-color: white;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 60px 180px 180px 80px 40px;
-            grid-template-areas: "logo" 
-                                    "nav" 
-                                    "contact" 
-                                    "social" 
-                                    "parrafo";
-            background-image: none;
-            width: 100%;
-            height: 540px;
-          }
-          
-          .footer__logo {
-            grid-area: logo;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: center;
-          }
-          
-          .footer__logo img {
-            object-fit: none;
-            animation-name: logo-footer;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in;
-            animation-duration: 5s;
-          }
-          
-          .footer__lists {
-            list-style: none;
-          }
-          
-          .footer__nav {
-            list-style: none;
-            grid-area: nav;
-            display: flex;
-            justify-content: space-evenly;
-            width: auto;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-content: flex-start;
-        
-          }
-        
-          .footer__nav ul {
-            padding: 0;
-            margin: auto;
-            font-size: 15px;
-        
-          }
-          
-          .footer__nav--link {
-            
-            color: black;
-            text-decoration: underline;
-            text-decoration-color: black;
-          }
-          
-          .foooter__contact {
-            grid-area: contact;
-            width: 100%;
-            height: 100%;
-            padding: 0%;
-            margin: 0%;
-          }
-        
-        
-          .foooter__contact ul{
-            padding: 2%;
-            margin: 0%;
-            
-          }
-          .footer__contactlists {
-            list-style: none;
-            font-size: 15px;
-            width: 100%;
-        
-          }
-          
-          .foooter__contacticons {
-            display: none;
-          }
-          
-          .foooter__social {
-            grid-area: social;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-content: center;
-            justify-content: space-evenly;
-            padding: 2%;
-            
-          }
-          
-          .footer__socialicons {
-            max-width: 40px;
-            max-height: 40px;
-          }
-          
-          .footer__parrafos {
-            grid-area: parrafo;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            flex-direction: row;
-            color: white;
-            background-image: url("../assets/background/asfalt.png");
-            height: 100%;
-        
-          }
-          
-          .footer__parrafos--p {
-            font-size: 9px;
-          }
+.footer {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 180px 180px 80px 40px;
+    grid-template-areas: "logo" 
+                            "nav" 
+                            "contact" 
+                            "social" 
+                            "parrafo";
+    background-image: none;
+    width: 100%;
+    height: 540px;
+  }
+  
+  .footer__logo {
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+  }
+  
+  .footer__logo img {
+    object-fit: none;
+    animation-name: logo-footer;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+  }
+  
+  .footer__lists {
+    list-style: none;
+  }
+  
+  .footer__nav {
+    list-style: none;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+  }
+
+  .footer__nav ul {
+    padding: 0;
+    margin: auto;
+    font-size: 15px;
+
+  }
+  
+  .footer__nav--link {
+    
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
+  
+  .foooter__contact {
+    grid-area: contact;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+  }
+
+
+  .foooter__contact ul{
+    padding: 2%;
+    margin: 0%;
+    
+  }
+  .footer__contactlists {
+    list-style: none;
+    font-size: 15px;
+    width: 100%;
+
+  }
+  
+  .foooter__contacticons {
+    display: none;
+  }
+  
+  .foooter__social {
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 2%;
+    
+  }
+  
+  .footer__socialicons {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  
+  .footer__parrafos {
+    grid-area: parrafo;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+    background-image: url("../assets/background/asfalt.png");
+    height: 100%;
+
+  }
+  
+  .footer__parrafos--p {
+    font-size: 9px;
+  }
 }
 
 
 @media screen and (max-width: 575px) {
-    .footer {
-        background-color: white;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 60px 180px 180px 80px 40px;
-        grid-template-areas: "logo" 
-                                "nav" 
-                                "contact" 
-                                "social" 
-                                "parrafo";
-        background-image: none;
-        width: 100%;
-        height: 540px;
-      }
-      
-      .footer__logo {
-        grid-area: logo;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: center;
-      }
-      
-      .footer__logo img {
-        object-fit: none;
-        animation-name: logo-footer;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in;
-        animation-duration: 5s;
-      }
-      
-      .footer__lists {
-        list-style: none;
-      }
-      
-      .footer__nav {
-        list-style: none;
-        grid-area: nav;
-        display: flex;
-        justify-content: space-evenly;
-        width: auto;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: flex-start;
-    
-      }
-    
-      .footer__nav ul {
-        padding: 0;
-        margin: auto;
-        font-size: 15px;
-    
-      }
-      
-      .footer__nav--link {
-        
-        color: black;
-        text-decoration: underline;
-        text-decoration-color: black;
-      }
-      
-      .foooter__contact {
-        grid-area: contact;
-        width: 100%;
-        height: 100%;
-        padding: 0%;
-        margin: 0%;
-      }
-    
-    
-      .foooter__contact ul{
-        padding: 2%;
-        margin: 0%;
-        
-      }
-      .footer__contactlists {
-        list-style: none;
-        font-size: 15px;
-        width: 100%;
-    
-      }
-      
-      .foooter__contacticons {
-        display: none;
-      }
-      
-      .foooter__social {
-        grid-area: social;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-evenly;
-        padding: 2%;
-        
-      }
-      
-      .footer__socialicons {
-        max-width: 40px;
-        max-height: 40px;
-      }
-      
-      .footer__parrafos {
-        grid-area: parrafo;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: row;
-        color: white;
-        background-image: url("../assets/background/asfalt.png");
-        height: 100%;
-    
-      }
-      
-      .footer__parrafos--p {
-        font-size: 9px;
-      }
-    }
+.footer {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 180px 180px 80px 40px;
+  grid-template-areas: "logo" 
+                        "nav" 
+                        "contact" 
+                        "social" 
+                        "parrafo";
+  background-image: none;
+  width: 100%;
+  height: 540px;
+  }
+
+.footer__logo {
+  grid-area: logo;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.footer__logo img {
+  object-fit: none;
+  animation-name: logo-footer;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 5s;
+}
+
+.footer__lists {
+  list-style: none;
+}
+
+.footer__nav {
+  list-style: none;
+  grid-area: nav;
+  display: flex;
+  justify-content: space-evenly;
+  width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+}
+
+.footer__nav ul {
+  padding: 0;
+  margin: auto;
+  font-size: 15px;
+
+}
+
+.footer__nav--link {
+  
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.foooter__contact {
+  grid-area: contact;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
+}
+
+
+.foooter__contact ul{
+  padding: 2%;
+  margin: 0%;
+  
+}
+.footer__contactlists {
+  list-style: none;
+  font-size: 15px;
+  width: 100%;
+
+}
+
+.foooter__contacticons {
+  display: none;
+}
+
+.foooter__social {
+  grid-area: social;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: 2%;
+  
+}
+
+.footer__socialicons {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.footer__parrafos {
+  grid-area: parrafo;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+  background-image: url("../assets/background/asfalt.png");
+  height: 100%;
+
+}
+
+.footer__parrafos--p {
+  font-size: 9px;
+}
+}

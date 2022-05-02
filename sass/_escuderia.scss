@@ -38,24 +38,23 @@ $paleta-colores: (
         padding-bottom: 20px;
         background-image: url('../assets/background/asfalt.png');
         }
-    
-}
-.escuderiacontainer__h2{
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 35px;
-}
-
-.escuderiacontainer__p{
-    text-align: justify;
-}
-
-.escuderiacontainer__li{
-    text-align: center;
-    list-style: none;
+        .escuderiacontainer__h2{
+            text-align: center;
+            padding-bottom: 20px;
+            font-size: 35px;
+        }
+        .escuderiacontainer__p{
+            text-align: justify;
+        }
+        .escuderiacontainer__li{
+            text-align: center;
+            list-style: none;
+        }
 }
 
-@mixin escuderia {    background-color: white;
+
+@mixin escuderia {  
+    background-color: white;
     margin: 30px;
     padding: 30px;
     transition: background-image 2s;
