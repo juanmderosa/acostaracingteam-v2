@@ -179,7 +179,7 @@ img {
     font-size: 10px;
     text-align: center; }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 990px) {
   .social {
     padding-top: 1rem;
     width: 100%;
@@ -192,6 +192,86 @@ img {
     padding-left: 20px;
     max-width: 50px;
     max-height: 50px; }
+  .footer {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 180px 180px 80px 40px;
+    grid-template-areas: "logo"  "nav"  "contact"  "social"  "parrafo";
+    background-image: none;
+    width: 100%;
+    height: 540px; }
+  .footer__logo {
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center; }
+  .footer__logo img {
+    object-fit: none;
+    animation-name: logo-footer;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s; }
+  .footer__lists {
+    list-style: none; }
+  .footer__nav {
+    list-style: none;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start; }
+  .footer__nav ul {
+    padding: 0;
+    margin: auto;
+    font-size: 15px; }
+  .footer__nav--link {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black; }
+  .foooter__contact {
+    grid-area: contact;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%; }
+  .foooter__contact ul {
+    padding: 2%;
+    margin: 0%; }
+  .footer__contactlists {
+    list-style: none;
+    font-size: 15px;
+    width: 100%; }
+  .foooter__contacticons {
+    display: none; }
+  .foooter__social {
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 2%; }
+  .footer__socialicons {
+    max-width: 40px;
+    max-height: 40px; }
+  .footer__parrafos {
+    grid-area: parrafo;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+    background-image: url("../assets/background/asfalt.png");
+    height: 100%; }
+  .footer__parrafos--p {
+    font-size: 9px; } }
+
+@media screen and (max-width: 575px) {
   .footer {
     background-color: white;
     display: grid;
@@ -390,6 +470,46 @@ img {
   .titulo__h1 {
     font: bold 30px "Montserrat"; } }
 
+/* Media Query */
+@media screen and (max-width: 990px) {
+  .titulo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "titulo"  "parrafo" "foto";
+    padding-top: 20px; }
+    .titulo h1 {
+      font: bold 50px "Montserrat";
+      color: white;
+      grid-area: titulo;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%; }
+    .titulo p {
+      color: white;
+      font-size: 18px;
+      grid-area: parrafo;
+      text-align: center;
+      align-self: center;
+      padding-right: 30px;
+      padding-left: 30px; }
+    .titulo .fotosindex {
+      grid-area: foto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-around;
+      padding-top: 30px;
+      padding-bottom: 30px; }
+      .titulo .fotosindex .fotosindex__img {
+        padding-top: 20px;
+        width: 450px;
+        min-width: 250px; } }
+
 /* Escuderia */
 .escuderiacontainer {
   display: grid;
@@ -518,6 +638,17 @@ img {
   color: white;
   margin-top: 30px; }
 
+/* Galeria */
+.galeriacontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+  grid-gap: 20px;
+  padding: 20px; }
+
+.galeria__foto {
+  width: 100%;
+  align-self: center; }
+
 /* Noticias */
 .titulopagina__h1, .titulopagina__h1--galeria {
   display: block;
@@ -528,58 +659,3 @@ img {
   text-decoration: underline;
   padding-top: 20px;
   padding-bottom: 30px; }
-
-/* Galeria */
-.galeriacontainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "foto1 foto2" "foto3 foto4" "foto5 foto6" "video video";
-  justify-items: center;
-  padding: 20px;
-  margin-left: 5%;
-  margin-right: 5%;
-  row-gap: 20px;
-  column-gap: 20px;
-  border-radius: 10px;
-  height: max-content; }
-
-.galeriacontainer div {
-  border: 5px solid white;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: white;
-  margin: auto; }
-
-.galeriacontainer div p {
-  text-align: center; }
-
-.galeriacontainer div img {
-  max-width: 450px;
-  object-fit: cover;
-  transition: max-widht 1s; }
-
-.galeriacontainer div img:hover {
-  max-width: 600px; }
-
-.galeria__foto2 {
-  grid-area: foto2; }
-
-.galeria__foto2 {
-  grid-area: foto2; }
-
-.galeria__foto3 {
-  grid-area: foto3; }
-
-.galeria__foto4 {
-  grid-area: foto4; }
-
-.galeria__foto5 {
-  grid-area: foto5; }
-
-.galeria__foto6 {
-  grid-area: foto6; }
-
-.galeria__video {
-  grid-area: video;
-  width: 720px; }

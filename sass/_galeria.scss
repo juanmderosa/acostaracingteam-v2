@@ -1,0 +1,17 @@
+/* Galeria */
+
+.titulopagina__h1--galeria{
+    @extend .titulopagina__h1;
+}
+
+.galeriacontainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(335px,1fr));
+    grid-gap: 20px; 
+    padding: 20px;
+}
+.galeria__foto{
+    width: 100%;
+    align-self: center;
+}
+

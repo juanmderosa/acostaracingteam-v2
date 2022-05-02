@@ -165,3 +165,53 @@ $h1-titulosquery: bold 30px 'Montserrat';
         font: $h1-titulosquery;
     }
 }
+
+/* Media Query */
+
+@media screen and (max-width: 990px) {
+    .titulo{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+                "titulo" 
+                "parrafo"
+                "foto";
+        padding-top: 20px;
+        h1{
+            font: $h1-titulos;
+            color: $h1-color;
+            grid-area: titulo;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            }
+            p{
+                color: white;
+                font-size: 18px;
+                grid-area: parrafo;
+                text-align: center;
+                align-self: center;
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+            .fotosindex{
+                grid-area: foto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: space-around;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                .fotosindex__img{
+                    padding-top: 20px;
+                    width: 450px;
+                    min-width: 250px;
+                }
+            }
+        }
+}
