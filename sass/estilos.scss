@@ -11,30 +11,8 @@ $h1-titulos: bold 50px 'Montserrat';
 $h1-titulosquery: bold 30px 'Montserrat';
 $h1-color: white;
 
-//Maps
-$paleta-colores: (
-    negro: #0000 ,
-    rojo: #dc1d25 ,
-    verde:  #07a44f ,
-    verdeoscuro: #24593a ,
-    grisclaro: #eff1ef ,
-    grismedio: #aeabab ,
-    grisoscuro: #827e79 ,
-    blanco: #fff,
-);
 
-/* Noticias */
 
-.titulopagina__h1{
-        display: block;
-        font: $h1-titulos;
-        color: $h1-color;
-        text-align: center;
-        line-height: 1.5;
-        text-decoration: underline;
-        padding-top: 20px;
-        padding-bottom: 30px;
-        
-    }
+
 
 

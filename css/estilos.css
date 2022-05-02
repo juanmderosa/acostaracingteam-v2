@@ -609,6 +609,17 @@ img {
   .titulopagina__h1--escuderia {
     font: bold 30px "Montserrat"; } }
 
+/* Noticias */
+.titulopagina__h1, .titulopagina__h1--galeria {
+  display: block;
+  font: bold 50px "Montserrat";
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  text-decoration: underline;
+  padding-top: 20px;
+  padding-bottom: 30px; }
+
 .botonnoticias {
   background-color: #dc1d25;
   color: #fff;
@@ -648,14 +659,3 @@ img {
 .galeria__foto {
   width: 100%;
   align-self: center; }
-
-/* Noticias */
-.titulopagina__h1, .titulopagina__h1--galeria {
-  display: block;
-  font: bold 50px "Montserrat";
-  color: white;
-  text-align: center;
-  line-height: 1.5;
-  text-decoration: underline;
-  padding-top: 20px;
-  padding-bottom: 30px; }
