@@ -1,0 +1,167 @@
+//Maps
+$paleta-colores: (
+    negro: #0000 ,
+    rojo: #dc1d25 ,
+    verde:  #07a44f ,
+    verdeoscuro: #24593a ,
+    grisclaro: #eff1ef ,
+    grismedio: #aeabab ,
+    grisoscuro: #827e79 ,
+    blanco: #fff,
+);
+
+//Variables
+$h1-titulos: bold 50px 'Montserrat';
+$h1-color: white;
+$h1-titulosquery: bold 30px 'Montserrat';
+
+
+/*Main Index*/
+.titulo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+            ". titulo parrafo parrafo"
+            "foto foto foto foto";
+    padding-top: 40px;
+    h1{
+        font: $h1-titulos;
+        color: $h1-color;
+        grid-area: titulo;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        }
+        p{
+            color: white;
+            font-size: 18px;
+            grid-area: parrafo;
+            text-align: justify;
+            align-self: center;
+            padding-right: 100px;
+        }
+        .fotosindex{
+            grid-area: foto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-around;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            .fotosindex__img{
+                width: 450px;
+                min-width: 250px;
+            }
+        }
+    }
+
+.sponsors{
+    background-color: map-get($map: $paleta-colores, $key: blanco);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 200px;
+    grid-template-areas: ". titulo ."
+                        "sponsor sponsor sponsor";
+    width: 100%;
+}
+
+.sponsors__h2{
+    grid-area: titulo;
+    color: map-get($map: $paleta-colores, $key: rojo );
+    text-align: center;
+    align-self: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px -2px 2px map-get($map: $paleta-colores, $key: grisoscuro );;
+} 
+
+.sponsors__imgcontainer{
+    grid-area: sponsor;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.sponsors__img{
+    min-width: 75px;
+}
+
+.videoindex{
+    max-width:1080px;
+    margin:auto;   
+    padding: 20px;
+}
+
+.videoindex__container{
+    height:0px;
+    width:100%;
+    padding-top:56.25%; 
+    position:relative;
+}
+.videoindex__vid{
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;
+}
+
+@media screen and (max-width: 990px) {
+
+    /*Main Index*/
+.titulo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "titulo" 
+                        "parrafo"
+                        "fotos"; 
+    width: 100%;
+    height: max-content;
+    padding: 2%;
+    margin: auto;
+    }
+
+.titulo__h1 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    grid-area: titulo;
+    font-weight: bold;
+    margin-top: 0;
+    margin: auto;
+    padding-top: 0;
+}
+
+.titulo__p {
+    color: white;
+    font-size: 16px;
+    grid-area: parrafo;
+    text-align: justify;
+    align-self: center;
+    padding: 2%;
+}
+
+.fotosindex {
+    display: none;
+}
+
+.fotosindex__img {
+    width: 200px;
+}
+
+.sponsors__img{
+    height: 100px;
+    width: 200px;
+}
+}
+
+@media screen and (max-width: 620px){
+    .titulo__h1 {
+        font: $h1-titulosquery;
+    }
+}

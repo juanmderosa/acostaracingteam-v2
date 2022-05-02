@@ -7,6 +7,7 @@
     <meta name="description" content="Escudería de Karting Acosta Racing Team. Competiciones nacionales e internacionales. Los mejores en atención en pista.">
     <meta name="keywords" content="Acosta Racing Team, Acosta Racing Team contacto, Acosta Racing Team teléfono, Acosta Racing Team e-mail, Acosta Racing Team whatsapp, Acosta Racing Team facebook, Acosta Racing Team instagram, Acosta Racing Team youtube, Acosta Racing Team redes">
     <link rel="shotcurt icon" href="../assets/logo/logoacostaracingteam.png">
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,101 +16,110 @@
 </head>
 <body>
         <!-- Header -->
-
-    <header class="header">
-        <section class="logo">
-            <a href="#">
-                <img class=header__logo src="../assets/logo/logoacostaracingteam.png" alt="Logo Acosta Racing Team"> </a>
-        </section>
-        <nav class="nav">
-            <ul class="nav__ul">
-                <li><a class="header__links" href="../index.html">Inicio</a></li>
-                <li><a class="header__links" href="noticias.html">Noticias</a></li>
-                <li><a class="header__links" href="escuderia.html">Escudería</a></li>
-                <li><a class="header__links" href="galeria.html">Galería</a></li>
-                <li><a class="header__links" href="#">Contacto</a></li>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand ps-3" href="#"><img src="../assets/logo/logoacostaracingteam.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content-evenly flex-grow-1 pe-3 me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link--header" aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link--header" href="escuderia.html">Escudería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link--header" href="noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link--header" href="galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link--header" href="#">Contacto</a>
+                </li>
             </ul>
-        </nav>
-        <section class="social">
-            <img class="header__socialicons" src="../assets/icons/facebookicon.png" alt="facebookicon" > 
-            <img class="header__socialicons" src="../assets/icons/instagramicon.png" alt="instagramicon"> 
-            <img class="header__socialicons" src="../assets/icons/youtubeicon.png" alt="youtubeicon">
+        <div class="social pe-3">
+            <img class="header__socialicons" src="../assets/icons/instagramicon.png" alt="">
+            <img class="header__socialicons" src="../assets/icons/facebookicon.png" alt="">
+            <img class="header__socialicons" src="../assets/icons/youtubeicon.png" alt="">
+        </div>
+        </div>
+        </div>
+    </nav>
+        <section>
+            <img class="img-fluid" src="../assets/img/bannerprincipal.png" alt="">
         </section>
-    </header>
-    </header>
+</header>
 
     <!-- Formulario de contacto -->
-    <main class="form">
-        <H1>CONTACTO</H1>
-
-        <Section class="formulario">
-            <form action="procesar.php" method="post"></form>
-
-            <fieldset>
-                <h2>Dejanos tu mensaje</h2>
-                <div class="contactodatos">
-                <p>
-                    <label for="nombre"> Nombre: </label>
-                    <input type="text" name="nombre">
-                </p>
-                <p>
-                    <label for="apellido">Apellido: </label>
-                    <input type="text"name "Apellido" >
-                </p>
-                <p>
-                    <label for="email">Email: </label>
-                    <input type="email"name E-mail>
-                </p>
-                <p>
-                    <label for="telefono">Teléfono: </label>
-                    <input type="text"name telefono>
-                </p>
-                </div>
-                <div class="textarea">
-                <h2>Escribínos tu consulta</h2>
-                    <textarea class="contactotextarea" name="comentario" id=></textarea>
-                                <p>
-                <input class="botoncontacto" type="submit" value="Enviar">
-                </p>
-                </div>
-            </fieldset>
-        </Section>
-                <section class="nuestrasRedes">
-            <h2>Nuestras Redes</h2>
-            <div class="nuestrasRedes__div">
-            <img src="../assets/icons/facebookicon.png" alt="facebookicon" > 
-            <img src="../assets/icons/instagramicon.png" alt="instagramicon" > 
-            <img src="../assets/icons/youtubeicon.png" alt="youtubeicon" >
-            </div>
-        </section>
-        <section class="datosContacto">
-            <h2>Otras formas de contactarnos</h2>
-            <ul>
-                <li><p> E-mail: contacto@acostaracing.com </p></li> 
-                <li><p> Whatsapp: +54 911 5652-2142</p></li> 
-            </ul>
-        </section>
-    </main>
-    
-        <!-- Footer  -->
-    <footer class="footer">
-        <div class="footer__logo">
-            <img src="../assets/logo/logoacostaracingteam.png" alt="">
+<div>
+    <H1 class="titulopagina__h1">CONTACTO</H1>
+    </div>
+<!--Form Bootstrap-->
+<main class="container p-3 bg-white mb-5 rounded">
+    <form class="row g-3">
+        <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
         </div>
-        <div class="footer__nav">
-                <ul class="footer__lists">
-                    <li><a class="footer__nav--link" href="../index.html">Inicio</a></li>
-                    <li><a class="footer__nav--link" href="noticias.html">Noticias</a></li>
-                    <li><a class="footer__nav--link" href="escuderia.html">Escudería</a></li>
-                    <li><a class="footer__nav--link" href="galeria.html">Galería</a></li>
-                    <li><a class="footer__nav--link" href="#">Contacto</a></li>
-                </ul>
+        <div class="col-md-6">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="name" placeholder="Apellido">
+        </div>
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="E-mail">
+    </div>
+    <div class="col-md-6">
+        <label for="telefono" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="telefono" placeholder="Telefono">
+    </div>
+    <div class="col-md-6">
+        <label for="País" class="form-label">País</label>
+        <input type="text" class="form-control" id="País">
+    </div>
+    <div class="col-md-6">
+        <label for="motivoconsulta" class="form-label">Motivo de consulta</label>
+        <select id="motivoconsulta" class="form-select">
+        <option selected>Seleccioná</option>
+        <option>Prueba de pista</option>
+        <option>Compra de partes</option>
+        <option>Atención en pista</option>
+        <option>Otro</option>
+        </select>
+    </div>
+    <div>
+        <label for="exampleFormControlTextarea1" class="form-label">Escribinos tu consulta</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+        <button type="submit" class="btn btn-lg botoncontacto">Enviar</button>
+    </div>
+    </form>
+</main>
+    
+    <!-- Footer  -->
+<footer class="footer">
+    <div class="footer__logo">
+        <img src="../assets/logo/logoacostaracingteam.png" alt="">
+    </div>
+    <div class="footer__nav">
+            <ul class="footer__lists">
+                <li><a class="footer__nav--link" href="../index.html">Inicio</a></li>
+                <li><a class="footer__nav--link" href="noticias.html">Noticias</a></li>
+                <li><a class="footer__nav--link" href="escuderia.html">Escudería</a></li>
+                <li><a class="footer__nav--link" href="galeria.html">Galería</a></li>
+                <li><a class="footer__nav--link" href="#">Contacto</a></li>
+            </ul>
         </div>       
         <div class="foooter__contact">       
             <ul >
                 <li class="footer__contactlists"><img class="foooter__contacticons" src="../assets/icons/telefonoicon.png" alt="acosta kart telefono Contacto"> <p>Teléfono: 000000</p></li>
-                <li class="footer__contactlists"><img class="foooter__contact_icons" src="../assets/icons/emailicon.png" alt="acosta kart e-mail Contacto"> <p>Teléfono: 000000</p></li>
-                <li class="footer__contactlists"><img class="foooter__contact_icons" src="../assets/icons/whatsappicon.png" alt="acosta kart whatsapp Contacto"> <p>Teléfono: 000000</p></li>
+                <li class="footer__contactlists"><img class="foooter__contacticons" src="../assets/icons/emailicon.png" alt="acosta kart e-mail Contacto"> <p>Teléfono: 000000</p></li>
+                <li class="footer__contactlists"><img class="foooter__contacticons" src="../assets/icons/whatsappicon.png" alt="acosta kart whatsapp Contacto"> <p>Teléfono: 000000</p></li>
             </ul>
         </div>             
         <div class="foooter__social">
@@ -121,6 +131,6 @@
             <p class="footer__parrafos--p">Todos los Derechos Reservados - 2022 - Sitio creado y diseñado por Juan Martín De Rosa</p>
         </div>
     </footer>
-    
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

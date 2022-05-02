@@ -1,0 +1,138 @@
+//Variables
+$h1-titulos: bold 50px 'Montserrat';
+$h1-titulosquery: bold 30px 'Montserrat';
+$h1-color: white;
+
+//Maps
+$paleta-colores: (
+    negro: #0000 ,
+    rojo: #dc1d25 ,
+    verde:  #07a44f ,
+    verdeoscuro: #24593a ,
+    grisclaro: #eff1ef ,
+    grismedio: #aeabab ,
+    grisoscuro: #827e79 ,
+    blanco: #fff,
+);
+
+
+/* Escuderia */
+
+.escuderiacontainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+        grid-template-areas:    "titulo titulo titulo titulo"
+                            "historia historia filosofia filosofia"
+                            "titulos titulos titulos titulos"
+                            "foto foto foto foto";
+    cursor: default;
+    .titulopagina__h1--escuderia{
+        font: $h1-titulos;
+        color: $h1-color;
+        grid-area: titulo;
+        text-align: center;
+        line-height: 1.5;
+        text-decoration: underline;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-image: url('../assets/background/asfalt.png');
+        }
+    
+}
+.escuderiacontainer__h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 35px;
+}
+
+.escuderiacontainer__p{
+    text-align: justify;
+}
+
+.escuderiacontainer__li{
+    text-align: center;
+    list-style: none;
+}
+
+@mixin escuderia {    background-color: white;
+    margin: 30px;
+    padding: 30px;
+    transition: background-image 2s;
+}
+
+.escuderiacontainer__historia{
+    @include escuderia();
+    grid-area: historia;
+    &:hover{
+        background-image: linear-gradient(white, grey);
+        transform: translate(15px);}
+}
+
+.escuderiacontainer__titulos{
+    @include escuderia();
+    grid-area: titulos;
+    align-self: center;
+    &:hover{
+        background-image: linear-gradient(white, grey);
+        transform: translatey(-15px);
+    }
+}
+
+.escuderiacontainer__filosofia{
+    @include escuderia();
+    grid-area: filosofia;
+    &:hover{
+        background-image: linear-gradient(white, grey);
+        transform: translate(15px);}
+}
+
+.escuderia__imgcontainer{
+    grid-area: foto;
+    margin: 30px;
+}
+
+.escuderia__img{
+    object-fit: cover;
+    width: 100%;
+}
+
+@media screen and (max-width: 990px) {
+.escuderiacontainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:    "titulo titulo titulo " 
+                            "historia historia historia" 
+                            "filosofia filosofia filosofia" 
+                            "titulos titulos titulos" 
+                            "foto foto foto ";
+    }
+
+.escuderiacontainer__titulos {
+    grid-area: titulos;
+    background-color: white;
+    margin: 30px;
+    padding: 30px;
+    align-self: center; }
+.escuderiacontainer__filosofia {
+    grid-area: filosofia;
+    background-color: white;
+    margin: 30px;
+    padding: 30px; }
+.escuderiacontainer__historia {
+    grid-area: historia;
+    background-color: white;
+    margin: 30px;
+    padding: 30px; }
+.escuderia__imgcontainer {
+    grid-area: foto;
+    margin: 30px; }
+    
+}
+
+@media screen and (max-width: 620px){
+    .titulopagina__h1--escuderia{
+                font: $h1-titulosquery;
+    }
+}

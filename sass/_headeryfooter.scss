@@ -1,0 +1,344 @@
+//Maps
+$paleta-colores: (
+    negro: #0000 ,
+    rojo: #dc1d25 ,
+    verde:  #07a44f ,
+    verdeoscuro: #24593a ,
+    grisclaro: #eff1ef ,
+    grismedio: #aeabab ,
+    grisoscuro: #827e79 ,
+    blanco: #fff,
+);
+
+//Variables
+$h1-titulos: bold 50px 'Montserrat';
+$h1-color: white;
+$h1-titulosquery: bold 30px 'Montserrat';
+
+
+.header{
+    background-image: url('../assets/img/bannerprincipal.png');
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-color: white;
+    max-height: 450px;
+    margin: auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "logo nav nav social";
+}
+
+
+.logo{
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+
+.nav{
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+.nav__ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+.header__links{
+    text-decoration: underline;
+    color: black;
+    font-weight: 500;
+    transition: color 10ms;
+        &:hover{
+            color: map-get($map: $paleta-colores, $key: rojo);
+            font-weight: bold;}
+
+			}
+		}
+	}
+
+.social{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+    
+.header__socialicons{
+    max-width: 30px;
+    max-height: 30px;
+    transition: max-widht, max-height 1s;
+        &:hover{
+            max-width: 40px;
+            max-height: 40px;
+        }
+    }
+
+
+.navbar-nav{
+    width: 100%;
+}
+
+.navbar-brand{
+    padding-left: 1,5rem;
+}
+
+.nav-link--header{
+    text-decoration: underline;
+    color: black;
+    font-weight: 500;
+    transition: color 10ms;
+    &:hover{
+        color: map-get($map: $paleta-colores, $key: rojo);
+        font-weight: bold;}
+        }
+
+/*Footer*/
+
+.footer{
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 300px 30px;
+    grid-template-areas: "logo nav contact social"
+                            ". parrafo parrafo .";
+    background-image: linear-gradient(to right, white,grey)
+}
+
+.footer__logo{
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    img{
+        object-fit: none;
+        animation-name: logo-footer;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-duration: 5s;
+        @keyframes logo-footer {
+            0%{ transform: rotateX(0deg);}
+            25%{ transform: rotateX(45deg)}
+            50%{ transform: rotateX(90deg);}
+            75%{ transform: rotateX(180deg)}
+            100%{ transform: rotateX(360deg);}
+        }
+    }
+
+}
+.footer__lists{
+    list-style: none;
+    }
+
+.footer__nav{
+    text-decoration: none;
+    list-style: none;
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    .footer__nav--link{
+        color: black;
+        text-decoration: underline;
+        text-decoration-color: black;
+    }
+}
+
+.foooter__contact{
+    grid-area: contact;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    .footer__contactlists{
+        list-style: none;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-end;
+        padding-bottom: 20px;
+        .foooter__contacticons{
+            size: 20px;    
+        }
+    }
+}
+
+.foooter__social{
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    .footer__socialicons{
+        max-width: 40px;
+        max-height: 40px;            
+    }
+}
+
+.footer__parrafos{
+    grid-area: parrafo;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: white;
+    .footer__parrafos--p{
+        font-size: 10px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 991px) {
+    .social{
+        padding-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .header__socialicons{
+        padding-left: 20px;
+        max-width: 50px;
+        max-height: 50px;}
+
+        .footer {
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 60px 180px 180px 80px 40px;
+            grid-template-areas: "logo" 
+                                    "nav" 
+                                    "contact" 
+                                    "social" 
+                                    "parrafo";
+            background-image: none;
+            width: 100%;
+            height: 540px;
+          }
+          
+          .footer__logo {
+            grid-area: logo;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: center;
+          }
+          
+          .footer__logo img {
+            object-fit: none;
+            animation-name: logo-footer;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-duration: 5s;
+          }
+          
+          .footer__lists {
+            list-style: none;
+          }
+          
+          .footer__nav {
+            list-style: none;
+            grid-area: nav;
+            display: flex;
+            justify-content: space-evenly;
+            width: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        
+          }
+        
+          .footer__nav ul {
+            padding: 0;
+            margin: auto;
+            font-size: 15px;
+        
+          }
+          
+          .footer__nav--link {
+            
+            color: black;
+            text-decoration: underline;
+            text-decoration-color: black;
+          }
+          
+          .foooter__contact {
+            grid-area: contact;
+            width: 100%;
+            height: 100%;
+            padding: 0%;
+            margin: 0%;
+          }
+        
+        
+          .foooter__contact ul{
+            padding: 2%;
+            margin: 0%;
+            
+          }
+          .footer__contactlists {
+            list-style: none;
+            font-size: 15px;
+            width: 100%;
+        
+          }
+          
+          .foooter__contacticons {
+            display: none;
+          }
+          
+          .foooter__social {
+            grid-area: social;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-evenly;
+            padding: 2%;
+            
+          }
+          
+          .footer__socialicons {
+            max-width: 40px;
+            max-height: 40px;
+          }
+          
+          .footer__parrafos {
+            grid-area: parrafo;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: row;
+            color: white;
+            background-image: url("../assets/background/asfalt.png");
+            height: 100%;
+        
+          }
+          
+          .footer__parrafos--p {
+            font-size: 9px;
+          }
+}
+
+
